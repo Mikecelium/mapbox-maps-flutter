@@ -43,10 +43,13 @@ class CircleAnnotation {
     this.circleStrokeColor,
     this.circleStrokeOpacity,
     this.circleStrokeWidth,
+    this.description,
   });
 
   /// The id for annotation
   String id;
+
+  String? description;
 
   /// The geometry that determines the location/shape of this annotation
   Map<String?, Object?>? geometry;
@@ -87,6 +90,7 @@ class CircleAnnotation {
       circleStrokeColor,
       circleStrokeOpacity,
       circleStrokeWidth,
+      description,
     ];
   }
 
@@ -103,6 +107,7 @@ class CircleAnnotation {
       circleStrokeColor: result[7] as int?,
       circleStrokeOpacity: result[8] as double?,
       circleStrokeWidth: result[9] as double?,
+      description: result[10] as String?,
     );
   }
 }
@@ -118,8 +123,12 @@ class CircleAnnotationOptions {
     this.circleStrokeColor,
     this.circleStrokeOpacity,
     this.circleStrokeWidth,
+    description,
+    
   });
 
+
+  String? description;
   /// The geometry that determines the location/shape of this annotation
   Map<String?, Object?>? geometry;
 
@@ -158,6 +167,8 @@ class CircleAnnotationOptions {
       circleStrokeColor,
       circleStrokeOpacity,
       circleStrokeWidth,
+      description,
+      
     ];
   }
 
@@ -173,6 +184,7 @@ class CircleAnnotationOptions {
       circleStrokeColor: result[6] as int?,
       circleStrokeOpacity: result[7] as double?,
       circleStrokeWidth: result[8] as double?,
+      description: result[9] as String?
     );
   }
 }
